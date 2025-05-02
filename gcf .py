@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Created by: Xiaohan Tian
-# Created on: Mar 3, 2025
+# Created on: May 1, 2025
 # This program is to find the greatest common factor of two numbers
 
 
