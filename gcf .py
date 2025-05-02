@@ -13,17 +13,24 @@ def main():
     third_num_string = input("Please enter the third number: ")
     #
     try:
-        #
+        # Casting first_num into integer
         first_num = int(first_num_string)
+        # Casting second_num into integer
         second_num = int(second_num_string)
+        # Casting third_num into integer
         third_num = int(third_num_string)
 
-        #
+        # Find the smallest number
         if first_num <= second_num and first_num <= third_num:
+            # If first_num is the smallest
+            # Then assign it to smallest
             smallest = first_num
         elif second_num <= first_num and second_num <= third_num:
+            # If second_num is the smallest
+            # Then assign it to smallest
             smallest = second_num
         else:
+            # The third_num is the smallest
             smallest = third_num
 
         #
@@ -46,5 +53,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
