@@ -33,12 +33,18 @@ def main():
                 and (second_num % counter == 0)
                 and (third_num % counter == 0)
             ):
-                rint(
+                print(
                     "The GCF of {0}, {1} and {2} is {3}".format(
                         first_num, second_num, third_num, counter
                     )
                 )
                 break
     #
+    except Exception:
+        print("Invalid input. Please enter valid integers.")
+
+
+if __name__ == "__main__":
+    main()
 
 
