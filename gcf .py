@@ -8,7 +8,9 @@ def main():
     # Display welcoming message
     print("Hello! Welcome to the program! I will help you to find the greatest GCF")
 
+    # Loop until the user decides to quit
     while True:
+        # Get user input for three numbers
         first_num_string = input("Please enter the first number: ")
         second_num_string = input("Please enter the second number: ")
         third_num_string = input("Please enter the third number: ")
@@ -49,6 +51,7 @@ def main():
                             first_num, second_num, third_num, counter
                         )
                     )
+                    # Break out of the loop
                     break
         # Catch any exceptions that occur during input conversion
         except Exception:
