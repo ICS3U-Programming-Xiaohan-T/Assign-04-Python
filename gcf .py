@@ -33,20 +33,23 @@ def main():
             # The third_num is the smallest
             smallest = third_num
 
-        #
+        # Find the GCF
+        # Loop from the smallest number to 1, decrementing by 1
         for counter in range(smallest, 0, -1):
             if (
+                # Check if the counter is a factor of all three numbers
                 (first_num % counter == 0)
                 and (second_num % counter == 0)
                 and (third_num % counter == 0)
             ):
+                # If it is, print the GCF and break out of the loop
                 print(
                     "The GCF of {0}, {1} and {2} is {3}".format(
                         first_num, second_num, third_num, counter
                     )
                 )
                 break
-    #
+    # Catch any exceptions that occur during input conversion
     except Exception:
         print("Invalid input. Please enter valid integers.")
 
