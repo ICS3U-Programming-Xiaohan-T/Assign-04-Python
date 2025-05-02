@@ -56,8 +56,7 @@ def main():
         # Ask the user if they want to try again
         # If the user doesn't say yes, exit the loop
         play_again = input("Do you want to try another set of numbers? (yes/no): ")
-        if play_again != "yes" or play_again != "Yes":
-            # Exit the loop if the user doesn't say yes
+        if play_again != "yes" and play_again != "Yes":
             break
 
     # Say goodbye after the user quits
