@@ -32,3 +32,13 @@ def main():
                 (first_num % counter == 0)
                 and (second_num % counter == 0)
                 and (third_num % counter == 0)
+            ):
+                rint(
+                    "The GCF of {0}, {1} and {2} is {3}".format(
+                        first_num, second_num, third_num, counter
+                    )
+                )
+                break
+    #
+
+
