@@ -8,50 +8,51 @@ def main():
     # Display welcoming message
     print("Hello! Welcome to the program! I will help you to find the greatest GCF")
 
-    first_num_string = input("Please enter the first number: ")
-    second_num_string = input("Please enter the second number: ")
-    third_num_string = input("Please enter the third number: ")
-    #
-    try:
-        # Casting first_num into integer
-        first_num = int(first_num_string)
-        # Casting second_num into integer
-        second_num = int(second_num_string)
-        # Casting third_num into integer
-        third_num = int(third_num_string)
+    while True:
+        first_num_string = input("Please enter the first number: ")
+        second_num_string = input("Please enter the second number: ")
+        third_num_string = input("Please enter the third number: ")
 
-        # Find the smallest number
-        if first_num <= second_num and first_num <= third_num:
-            # If first_num is the smallest
-            # Then assign it to smallest
-            smallest = first_num
-        elif second_num <= first_num and second_num <= third_num:
-            # If second_num is the smallest
-            # Then assign it to smallest
-            smallest = second_num
-        else:
-            # The third_num is the smallest
-            smallest = third_num
+        try:
+            # Casting first_num into integer
+            first_num = int(first_num_string)
+            # Casting second_num into integer
+            second_num = int(second_num_string)
+            # Casting third_num into integer
+            third_num = int(third_num_string)
 
-        # Find the GCF
-        # Loop from the smallest number to 1, decrementing by 1
-        for counter in range(smallest, 0, -1):
-            if (
-                # Check if the counter is a factor of all three numbers
-                (first_num % counter == 0)
-                and (second_num % counter == 0)
-                and (third_num % counter == 0)
-            ):
-                # If it is, print the GCF and break out of the loop
-                print(
-                    "The GCF of {0}, {1} and {2} is {3}".format(
-                        first_num, second_num, third_num, counter
+            # Find the smallest number
+            if first_num <= second_num and first_num <= third_num:
+                # If first_num is the smallest
+                # Then assign it to smallest
+                smallest = first_num
+            elif second_num <= first_num and second_num <= third_num:
+                # If second_num is the smallest
+                # Then assign it to smallest
+                smallest = second_num
+            else:
+                # The third_num is the smallest
+                smallest = third_num
+
+            # Find the GCF
+            # Loop from the smallest number to 1, decrementing by 1
+            for counter in range(smallest, 0, -1):
+                if (
+                    # Check if the counter is a factor of all three numbers
+                    (first_num % counter == 0)
+                    and (second_num % counter == 0)
+                    and (third_num % counter == 0)
+                ):
+                    # If it is, print the GCF and break out of the loop
+                    print(
+                        "The GCF of {0}, {1} and {2} is {3}".format(
+                            first_num, second_num, third_num, counter
+                        )
                     )
-                )
-                break
-    # Catch any exceptions that occur during input conversion
-    except Exception:
-        print("Invalid input. Please enter valid integers.")
+                    break
+        # Catch any exceptions that occur during input conversion
+        except Exception:
+            print("Invalid input. Please enter valid integers.")
 
 
 if __name__ == "__main__":
