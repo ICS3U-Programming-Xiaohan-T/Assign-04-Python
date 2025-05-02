@@ -27,4 +27,8 @@ def main():
             smallest = third_num
 
         #
-        
+        for counter in range(smallest, 0, -1):
+            if (
+                (first_num % counter == 0)
+                and (second_num % counter == 0)
+                and (third_num % counter == 0)
